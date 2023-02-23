@@ -5,29 +5,69 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Document</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/moblie.css">
+
 </head>
-<div id="root"></div>
+
 <body>
+  <div id="root">
+
+    <header>
+      <div></div>
+      <div></div>
+    </header>
+    <main>
+      <div>a</div>
+      <div>s</div>
+    </main>
+    <footer></footer>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <script>
-    function changColor(a, b) {
-      let x = document.getElementById(a);
+    let setData = {
+      tagNames: ["header", "main", "footer"],
+      contentValues: ["머리", "메인", "발꼬락"],
+      colors: ["red", "green", "blue"]
     }
-    let root = document.getElementById("root");
+    let root = document.getElementById("root");//root id를 root로 선언 한다.
+    // root.innerHTML = "<" + setData.tagNames[0] + ">" + "<h1>" + setData.contentValues[0] + "</h1>" + "</" + setData.tagNames[0] + ">";
 
-    let = practiceArry = ["피카츄", "라이츄", "파이리"];
-    let studentArry = ["공욱재", "권예준", "김지섭"];
-    root.innerHTML = "<h1>" + practiceArry[0] + "</h1>";
-    root.textContent = studentArry[0];
-    
+    let colorlist = ["red", "blue", "green", "pink", "rgb(253, 160, 53)"] //컬러를 담는 리스트 배열로 만들어 주었다.
 
+    console.log(root.children[0]);
 
+    console.log(colorlist.length - 1);
 
+ 
+    for (let i = 0; i < colorlist.length; i++) {
+  
+        setTimeout(function () {
+        root.children[0].style.backgroundColor = colorlist[i];
+
+        console.log(i);
+
+      }, 1000 * i);
+
+    }
 
 
   </script>
-
 </body>
 
 </html>
