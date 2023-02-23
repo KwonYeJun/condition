@@ -7,6 +7,34 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <ul id="menu">
+    <li>items1</li>
+    <li>items2</li>
+    <li>items3</li>
+    <li>items4</li>
+    <li>items5</li>
+  </ul>
+<ul></ul>
+<ul></ul>
+<ul></ul>
+
+
+<script>
+  let menu = window.document.getElementById('menu'); //구분 하기 위하여 따옴표를 쓴다.
+  console.dir(menu); //구조를 보는 것이 훨씬 중요하다.
+  console.log(menu.children); //리턴을 확인 하는 작업 
+// let menu2 = document.getElementsByTagName("ul"); getElementsByTagName 이런 남이 만들어준 것들은 직접 확인 해봐야 한다. 여러개의 같은 태그를 한번에 작업을 할 때 사용 하면 좋을거 같다.
+
+console.log(menu.children[0]);
+
+
+
+
+
+
+
+</script>
+
+
 </body>
 </html>
